@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--navbar content-->
+
 <?php include('templates/navbar.php'); ?>
 
     <div class="intro">
