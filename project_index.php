@@ -1,30 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Database</title>
-    <link rel="stylesheet" href="project_style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/d791d40d5f.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-</head>
-<body>
-    <section class="header">
-        <nav id="navbar">
-            <a href="project_index.html"><img src="images/test.png"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="project_index.html">HOME</a></li>
-                    <li><a href="project_about.html">ABOUT</a></li>
-                    <a href="" class="user">USER</a>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+
+<?php include('templates/navbar.php'); ?>
 
     <div class="intro">
         <h1>Project: New World</h1>
@@ -44,28 +21,28 @@
                 <img src="images/village.jpg">
                 <div class="layer">
                     <h3>Village</h3>
-                    <a href="project_village.html"></a>
+                    <a href="project_village.php"></a>
                 </div>
             </div>
             <div class="location-col">
                 <img src="images/town.jpg">
                 <div class="layer">
                     <h3>Town</h3>
-                    <a href="project_town.html"></a>
+                    <a href="project_town.php"></a>
                 </div>
             </div>
             <div class="location-col">
                 <img src="images/city.jpg">
                 <div class="layer">
                     <h3>City</h3>
-                    <a href="project_city.html"></a>
+                    <a href="project_city.php"></a>
                 </div>
             </div>
             <div class="location-col">
                 <img src="images/metro.jpg">
                 <div class="layer">
                     <h3>Metropolis</h3>
-                    <a href="project_metro.html"></a>
+                    <a href="project_metro.php"></a>
                 </div>
             </div>
         </div>
@@ -73,13 +50,7 @@
 
     <!-- Footer -->
 
-    <section class="footer">
-        <h4>About Us</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Omnis culpa facere veritatis, <br>nostrum cum possimus necessitatibus vitae, nobis, 
-            est eveniet aperiam reiciendis in <br>porro ullam quas quam soluta accusantium nam?</p>
-        <p>Made by Johnson Vu</p>
-    </section>
+    <?php include('templates/footer.php'); ?>
 
 <!-------JavaScript for Toggle Menu ----->
 <script>

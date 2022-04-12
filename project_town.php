@@ -1,34 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Database</title>
-    <link rel="stylesheet" href="project_style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/d791d40d5f.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-</head>
-<body>
-    <section class="city-header">
-        <nav id="navbar">
-            <a href="project_index.html"><img src="images/test.png"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="project_index.html">HOME</a></li>
-                    <li><a href="project_about.html">ABOUT</a></li>
-                    <a href="" class="user">USER</a>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+    
+<?php include('templates/navbar.php'); ?>
 
     <div class="intro">
-        <h1>City</h1>
-        <p>Welcome to the City!</p>
+        <h1>Town</h1>
+        <p>Welcome to the Town!</p>
     </div>
 
     </section>
@@ -42,21 +19,21 @@
             <div class="shop-col">
                 <img src="images/weapon.webp">
                 <div class="layer">
-                    <h3>Best Weapons</h3>
+                    <h3>Better Weapons</h3>
                     <a href=""></a>
                 </div>
             </div>
             <div class="shop-col">
                 <img src="images/armor.png">
                 <div class="layer">
-                    <h3>Best Armor</h3>
+                    <h3>Better Armor</h3>
                     <a href=""></a>
                 </div>
             </div>
             <div class="shop-col">
                 <img src="images/accessory.webp">
                 <div class="layer">
-                    <h3>Best Accessories</h3>
+                    <h3>Better Accessories</h3>
                     <a href=""></a>
                 </div>
             </div>
@@ -70,17 +47,17 @@
 
         <div class="ex-row">
             <div class="ex-location-col">
-                <img src="images/town.jpg">
+                <img src="images/village.jpg">
                 <div class="layer">
-                    <h3>Prev: Town</h3>
-                    <a href="project_town.html"></a>
+                    <h3>Prev: Village</h3>
+                    <a href="project_village.php"></a>
                 </div>
             </div>
             <div class="ex-location-col">
-                <img src="images/metro.jpg">
+                <img src="images/city.jpg">
                 <div class="layer">
-                    <h3>Next: Metropolis</h3>
-                    <a href="project_metro.html"></a>
+                    <h3>Next: City</h3>
+                    <a href="project_city.php"></a>
                 </div>
             </div>
         </div>
@@ -88,13 +65,7 @@
 
     <!-- Footer -->
 
-    <section class="footer">
-        <h4>About Us</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Omnis culpa facere veritatis, <br>nostrum cum possimus necessitatibus vitae, nobis, 
-            est eveniet aperiam reiciendis in <br>porro ullam quas quam soluta accusantium nam?</p>
-        <p>Made by Johnson Vu</p>
-    </section>
+    <?php include('templates/footer.php'); ?>
 
 <!-------JavaScript for Toggle Menu ----->
 <script>
