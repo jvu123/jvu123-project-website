@@ -17,6 +17,11 @@
  //fetch the resulting rows as an array
  $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+ mysqli_free_result($result);
+
+ //close connection
+ mysqli_close($conn);
+
  print_r($user);
 
 ?>
