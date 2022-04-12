@@ -55,7 +55,7 @@ nav img{ /* logo size */
     border-style: solid;
     border-color: rgba(14, 14, 14, 0);
     background: padding-box;
-    background-color: rgba(82, 77, 17, .8);
+    background-color: rgba(122,105,21, .8);
     text-decoration: none;
     text-align: center;
     position: relative;
@@ -69,7 +69,7 @@ nav img{ /* logo size */
     content: '';
     width:0%;
     height: 2px;
-    background:rgb(82, 77, 17);
+    background:rgb(122,105,21);
     display: block;
     margin: auto;
     transition: 0.5s;
