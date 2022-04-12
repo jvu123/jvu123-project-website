@@ -1,6 +1,23 @@
 <?php
 
+ //connect to database
+ $conn = mysqli_connect('localhost','jvu','Saber.01','project_db');
 
+ //check connection
+ if(!$conn){
+    echo 'Connection error: ' . mysqli_connect_error();
+ }
+
+ //write query for all item
+ $sql = 'SELECT first_name, last_name, email FROM user_account WHERE username="thelegend27"';
+
+ //make query and get result
+ $result = mysqli_query($conn, $sql);
+
+ //fetch the resulting rows as an array
+ $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+ print_r($user);
 
 ?>
 
