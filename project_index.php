@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
-    <section class="user-header">
+    <section class="header">
         <?php include('templates/navbar.php'); ?>
 
     <div class="intro">
