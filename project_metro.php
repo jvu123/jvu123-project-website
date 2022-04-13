@@ -21,10 +21,10 @@
     <section class="metro-header">
         <?php include('templates/navbar.php'); ?>
 
-    <div class="intro">
-        <h1>Metropolis</h1>
-        <p>Welcome to the Metropolis!</p>
-    </div>
+        <div class="intro">
+            <h1>Metropolis</h1>
+            <p>Welcome to the Metropolis!</p>
+        </div>
 
     </section>
 

@@ -5,6 +5,7 @@
         <ul>
             <li><a href="project_index.php">HOME</a></li>
             <li><a href="project_about.php">ABOUT</a></li>
+            <li><a href="project_items.php">ITEMS</a></li>
             <a href="project_user.php" class="user">USER</a>
         </ul>
     </div>

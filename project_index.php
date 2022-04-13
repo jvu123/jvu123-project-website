@@ -21,10 +21,10 @@
     <section class="header">
         <?php include('templates/navbar.php'); ?>
 
-    <div class="intro">
-        <h1>Project: New World</h1>
-        <p>Where possibilities are endless.</p>
-    </div>
+        <div class="intro">
+            <h1>Project: New World</h1>
+            <p>Where possibilities are endless.</p>
+        </div>
 
     </section>
 

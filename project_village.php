@@ -21,10 +21,10 @@
     <section class="village-header">
         <?php include('templates/navbar.php'); ?>
 
-    <div class="intro">
-        <h1>Village</h1>
-        <p>Welcome to the Village!</p>
-    </div>
+        <div class="intro">
+            <h1>Village</h1>
+            <p>Welcome to the Village!</p>
+        </div>
 
     </section>
 

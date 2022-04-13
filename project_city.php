@@ -21,10 +21,10 @@
     <section class="city-header">
         <?php include('templates/navbar.php'); ?>
 
-    <div class="intro">
-        <h1>City</h1>
-        <p>Welcome to the City!</p>
-    </div>
+        <div class="intro">
+            <h1>City</h1>
+            <p>Welcome to the City!</p>
+        </div>
 
     </section>
 

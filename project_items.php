@@ -9,13 +9,13 @@
  }
 
  //write query for all item
- $sql = 'SELECT first_name, last_name, email FROM user_account WHERE username="thelegend27"';
+ $sql = 'SELECT item_name, description, rarity, price  FROM item ORDER BY item_id';
 
  //make query and get result
  $result = mysqli_query($conn, $sql);
 
  //fetch the resulting rows as an array
- $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+ $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
  mysqli_free_result($result);
 
@@ -42,15 +42,39 @@
         <?php include('templates/navbar.php'); ?>
 
         <div class="about-intro">
-            <h1>User Profile</h1>
+            <h1>Items</h1>
         </div>
 
     </section>
 
-    <section class="user-section">
-        <div class="row">
-            <p><?php print_r($user); ?></p>
+    <section class="item-section">
+
+        <div class="i-container">
+            <div class="i-row">
+                <div class="i-col">
+                    <p>Name</p>
+                </div>
+                <div class="i-col">
+                    <p>Description</p>
+                </div>
+                <div class="i-col">
+                    <p>Rarity</p>
+                </div>
+                <div class="i-col">
+                    <p>Price</p>
+                </div>
+            </div>
+            <?php foreach($items as $item){ ?>
+                <div class="i-row">
+
+                    <div class="i-col">
+                        <p><?php echo htmlspecialchars($item['item_name']); ?></p>
+                    </div>
+
+                </div>
+            <?php } ?>
         </div>
+
     </section>
 
     <!-- Footer -->
