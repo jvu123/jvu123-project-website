@@ -1,10 +1,5 @@
 <?php
-session_start();
 
-include("login/connection.php");
-include("login/functions.php");
-
-$user_data = check_login($conn);
 ?>
 
 <!DOCTYPE html>

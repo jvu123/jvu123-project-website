@@ -1,10 +1,6 @@
 <?php
-session_start();
 
 include("login/connection.php");
-include("login/functions.php");
-
- $user_data = check_login($conn);
 
  //write query for all item
  $sql = 'SELECT name, item_name, description, rarity, price  
