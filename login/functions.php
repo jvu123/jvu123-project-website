@@ -20,6 +20,7 @@ function check_login($conn) {
     }
 
     //redirect to login
+    echo "Redirected";
     header("Location: project_login.php");
     die;
 }

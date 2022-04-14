@@ -4,15 +4,14 @@ session_start();
     include("login/connection.php");
     include("login/functions.php");
 
-if(isset($_POST['username'])){
+if($_SERVER['REQUEST_METHOD'] == "POST"){
 
     $user_name=$_POST['username'];
     $password=$_POST['password'];
 
     $sql="SELECT * 
        from user_account 
-       where username='".$user_name."' 
-       AND password='".$password."'
+       where username='".$user_name."'
        limit 1";
 
        $result=mysqli_query($conn, $sql);
@@ -24,8 +23,8 @@ if(isset($_POST['username'])){
                 
                 if($user_data['password'] === $password){
 
-                    $_SESSION['user_id'] = $user_data['user_id'];
-                    header("Location: project_index.php");
+                    $_SESSION['username'] = $user_data['username'];
+                    header("Location: project_user.php");
                     die;
 
                 }
@@ -33,9 +32,6 @@ if(isset($_POST['username'])){
        }
        echo "Wrong User or Password";
 }
-
- //close connection
- mysqli_close($conn);
 
 ?>
 
