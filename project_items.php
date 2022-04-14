@@ -1,15 +1,15 @@
 <?php
+session_start();
 
- //connect to database
- $conn = mysqli_connect('localhost','jvu','Saber.01','project_db');
+ include("connection.php");
+ include("functions.php");
 
- //check connection
- if(!$conn){
-    echo 'Connection error: ' . mysqli_connect_error();
- }
+ $user_data = check_login($conn);
 
  //write query for all item
- $sql = 'SELECT item_name, description, rarity, price  FROM item ORDER BY item_id';
+ $sql = 'SELECT name, item_name, description, rarity, price  
+    FROM item, item_category, category
+    WHERE item.item_id=item_category.item_id AND category.category_id=item_category.category_id';
 
  //make query and get result
  $result = mysqli_query($conn, $sql);
@@ -52,23 +52,38 @@
         <div class="i-container">
             <div class="i-row">
                 <div class="i-col">
-                    <p>Name</p>
+                    <h4>Category</h4>
                 </div>
                 <div class="i-col">
-                    <p>Description</p>
+                    <h4>Name</h4>
                 </div>
                 <div class="i-col">
-                    <p>Rarity</p>
+                    <h4>Description</h4>
                 </div>
                 <div class="i-col">
-                    <p>Price</p>
+                    <h4>Rarity</h4>
+                </div>
+                <div class="i-col">
+                    <h4>Price</h4>
                 </div>
             </div>
             <?php foreach($items as $item){ ?>
                 <div class="i-row">
 
                     <div class="i-col">
+                        <p><?php echo htmlspecialchars($item['name']); ?></p>
+                    </div>
+                    <div class="i-col">
                         <p><?php echo htmlspecialchars($item['item_name']); ?></p>
+                    </div>
+                    <div class="i-col">
+                        <p><?php echo htmlspecialchars($item['description']); ?></p>
+                    </div>
+                    <div class="i-col">
+                        <p><?php echo htmlspecialchars($item['rarity']); ?></p>
+                    </div>
+                    <div class="i-col">
+                        <p><?php echo htmlspecialchars($item['price']) , ' gold'; ?></p>
                     </div>
 
                 </div>

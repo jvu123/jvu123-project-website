@@ -1,23 +1,8 @@
 <?php
+session_start();
 
- //connect to database
- $conn = mysqli_connect('localhost','jvu','Saber.01','project_db');
-
- //check connection
- if(!$conn){
-    echo 'Connection error: ' . mysqli_connect_error();
- }
-
- //write query for all item
- $sql = 'SELECT first_name, last_name, email FROM user_account WHERE username="thelegend27"';
-
- //make query and get result
- $result = mysqli_query($conn, $sql);
-
- //fetch the resulting rows as an array
- $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
- mysqli_free_result($result);
+include("connection.php");
+include("functions.php");
 
  //close connection
  mysqli_close($conn);
@@ -38,19 +23,24 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
-    <section class="about-header">
+    <section class="header">
         <?php include('templates/navbar.php'); ?>
 
-        <div class="about-intro">
-            <h1>User Profile</h1>
+        <div class="intro">
+            <h1>Login</h1>
+            <div class="login-container">
+                <form method="POST" action="#">
+                    <div class="form_input">
+                        <input type="text" name="username" placeholder="Enter your username"/>
+                    </div>
+                    <div class="form_input">
+                        <input type="password" name="password" placeholder="Enter your password"/>
+                    </div>
+                    <input type="submit" name="submit" value="LOGIN" class="btn-login"/>
+                </form>
+            </div>
         </div>
 
-    </section>
-
-    <section class="user-section">
-        <div class="row">
-            <p><?php print_r($user); ?></p>
-        </div>
     </section>
 
     <!-- Footer -->

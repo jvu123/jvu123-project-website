@@ -311,33 +311,60 @@ h1{
     background-size: cover;
     position: relative;
 }
-
-/*user page*/
-.user-section{
-    width: 80%;
-    margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-
 /*item page*/
 .item-section{
     width: 80%;
     margin: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
+.i-container{
+    border-style: solid;
+    border-width: 1px 1px 0 0;
 }
 .i-row{
-    margin-top: 10%;
     display: flex;
     justify-content: space-between;
+    border-style: solid;
+    border-width: 0 0 1px 0;
 }
 .i-col{
-    flex-basis: 40%;
-    border-radius: 10px;
-    margin-bottom: 30px;
+    flex-basis: 25%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
     position: relative;
     overflow: hidden;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+}
+
+/*login page*/
+.login-container{
+    margin-top: 15px;
+}
+.form_input{
+    padding: 25px;
+    margin: 10px;
+}
+
+input{
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.btn-login{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: rgb(122,105,21);
+    border-style: none;
+}
+.btn-login:hover{ /* hover animation for user button */
+    background-color: rgb(126, 113, 72);
+    cursor: pointer;
 }
 
 /*-----Media Query 700px-----*/
