@@ -1,8 +1,38 @@
 <?php
 session_start();
 
-include("connection.php");
-include("functions.php");
+    include("login/connection.php");
+    include("login/functions.php");
+
+if(isset($_POST['username'])){
+
+    $user_name=$_POST['username'];
+    $password=$_POST['password'];
+
+    $sql="SELECT * 
+       from user_account 
+       where username='".$user_name."' 
+       AND password='".$password."'
+       limit 1";
+
+       $result=mysqli_query($conn, $sql);
+
+       if($result){
+            if($result && mysqli_num_rows($result) > 0){
+
+                $user_data = mysqli_fetch_assoc($result);
+                
+                if($user_data['password'] === $password){
+
+                    $_SESSION['user_id'] = $user_data['user_id'];
+                    header("Location: project_index.php");
+                    die;
+
+                }
+            }
+       }
+       echo "Wrong User or Password";
+}
 
  //close connection
  mysqli_close($conn);
