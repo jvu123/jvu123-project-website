@@ -1,5 +1,5 @@
-DROP SCHEMA IF EXISTS project;
-CREATE SCHEMA project;
+DROP SCHEMA IF EXISTS project_db;
+CREATE SCHEMA project_db;
 USE project_db;
 
 #Table for 'item'
@@ -37,7 +37,7 @@ username varchar(25) not null,
 password varchar(25) not null,
 first_name varchar(50) not null,
 last_name varchar(50) not null,
-date_created datetime not null,
+date_created date not null,
 email varchar(50) default null
 );
 
