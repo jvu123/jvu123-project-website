@@ -1,0 +1,63 @@
+#Purchase History
+
+select a.username Username, i.item_name Item, i.price Price
+from user_account a, user_purchase u, purchase p, item i
+where a.user_id=u.user_id 
+and u.purchase_id=p.purchase_id
+and i.item_id=p.item_id;
+
+#Shop
+
+select s.name Shop, i.item_name Item, i.description Description, i.rarity Rarity, i.price Price
+from item i, shop s, shop_item b
+where b.shop_id=s.shop_id
+and i.item_id=b.item_id;
+
+#Categorized Items
+
+select c.name Category, i.item_name Item
+from item i, category c, item_category b
+where i.item_id=b.item_id
+and c.category_id=b.category_id;
+
+#sql query
+ $sql = 'SELECT c.name, i.item_name, i.description, i.rarity, i.price
+    from item i, category c, item_category b
+    where i.item_id=b.item_id
+    and c.category_id=b.category_id
+    ORDER BY item_id';
+
+
+#login test code
+ if(isset($_POST['username'])){
+
+     $uname=$_POST['username'];
+     $password=$_POST['password'];
+
+     $sql="SELECT * 
+        from user_account 
+        where username='".$uname."' 
+        AND password='".$password."'
+        limit 1";
+
+        $result=mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($result)==1){
+            echo " You Have Successfully Logged in";
+
+            exit();
+        }
+        else{
+            echo " You Have Entered Incorrect Username or Password";
+
+            exit();
+        }
+ }
+
+#user purchase test
+ $sql = "SELECT username, first_name, last_name, date_created, email, item_name, price
+from user_account, user_purchase, purchase, item
+where user_account.user_id=user_purchase.user_id 
+and user_purchase.purchase_id=purchase.purchase_id
+and item.item_id=purchase.item_id
+and user_account.username='".$name."'";
