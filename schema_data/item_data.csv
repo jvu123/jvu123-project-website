@@ -1,0 +1,45 @@
+ItemID,ItemName,ItemDescription,ItemRarity,ItemPrice
+1,Leather Chestplate,Made from cowhide,Common,20
+2,Leather Gauntlets,Made from cowhide,Common,5
+3,Leather Helmet,Made from cowhide,Common,10
+4,Leather Pants,Made from cowhide,Common,15
+5,Leather Boots,Made from cowhide,Common,5
+6,Leather Shield,Can block some attacks,Common,15
+7,Blunt Dagger,Used to be sharp,Common,10
+8,Rusted Sword,Pretty old,Common,15
+9,Wooden Spear,Sharp pointy stick,Common,20
+10,Wooden Ring,Carved from wood,Common,5
+11,String Necklace,Hand made by a child,Common,5
+12,Iron Chestplate,Made from iron ore,Uncommon,100
+13,Iron Gauntlets,Made from iron ore,Uncommon,25
+14,Iron Helmet,Made from iron ore,Uncommon,50
+15,Iron Leggings,Made from iron ore,Uncommon,75
+16,Iron Boots,Made from iron ore,Uncommon,25
+17,Iron Shield,Can block most attacks,Uncommon,75
+18,Iron Dagger,Sharp blade made from iron,Uncommon,50
+19,Iron Sword,Sharp sword made from iron,Uncommon,75
+20,Iron Spear,"Heavy and solid, made from iron",Uncommon,100
+21,Iron Ring,Piece of iron shaped into a ring,Uncommon,25
+22,Iron Necklace,Little chains of iron,Uncommon,25
+23,Steel Chestplate,Made from steel,Rare,500
+24,Steel Gauntlets,Made from steel,Rare,125
+25,Steel Helmet,Made from steel,Rare,250
+26,Steel Leggings,Made from steel,Rare,375
+27,Steel Boots,Made from steel,Rare,125
+28,Steel Shield,Can block almost all attacks,Rare,375
+29,Steel Dagger,Fine and sharp piece of steel,Rare,250
+30,Steel Sword,Durable and sharp,Rare,375
+31,Steel Spear,Heavy and sharp,Rare,500
+32,Silver Ring,Keep monsters away or cosplay,Rare,125
+33,Silver Necklace,Keep monsters away or cosplay,Rare,125
+34,Adamantium Chestplate,Made from the strongest material,Legendary,2500
+35,Adamantium Gauntlets,Made from the strongest material,Legendary,625
+36,Adamantium Helmet,Made from the strongest material,Legendary,1250
+37,Adamantium Leggings,Made from the strongest material,Legendary,1875
+38,Adamantium Boots,Made from the strongest material,Legendary,625
+39,Adamantium Shield,Can block all kinds of attacks,Legendary,1875
+40,Adamantium Dagger,Beautiful and sharp,Legendary,1250
+41,Adamantium Sword,Fit for a hero,Legendary,1875
+42,Adamantium Spear,"Long enough for a spearman, light enough for the best",Legendary,2500
+43,Diamond Ring,Woman's best friend,Legendary,625
+44,Gold Necklace,Woman's second best friend,Legendary,625
