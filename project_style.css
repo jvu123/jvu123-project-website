@@ -388,6 +388,38 @@ input{
 .user-header h1{
     text-align: center;
 }
+.logout-section{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.logout{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(122,105,21);
+}
+.logout:hover{
+    color: white;
+    cursor: pointer;
+}
+.acct-header{
+    padding-top: 100px;
+    padding-left: 10%;
+}
+.user-section{
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 250px;
+}
+.u-row{
+    display: flex;
+    justify-content: space-between;
+}
+.u-col{
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
 
 /*-----Media Query 700px-----*/
 @media(max-width: 700px){

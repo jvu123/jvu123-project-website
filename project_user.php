@@ -57,14 +57,16 @@ mysqli_close($conn);
 </head>
 <body>
     <section class="user-header">
-        <a href="logout.php">Logout</a>
+        <div class="logout-section">
+            <a class="logout" href="logout.php">Logout</a>
+        </div>
         <div class="user-intro">
             <h1>Welcome, <?php echo $user_data['username'];  ?></h1>
         </div>
 
     </section>
 
-    <div>
+    <div class="acct-header">
         <h3>Account Information</h3>
     </div>
 
@@ -72,8 +74,6 @@ mysqli_close($conn);
         <div class="u-row">
             <div class="u-col">
                 <h4>Username:</h4>
-            </div>
-            <div class="u-col">
                 <?php foreach($acc as $info){ ?>
                     <p><?php echo htmlspecialchars($info['username']);?></p>
                 <?php } ?>
@@ -82,8 +82,6 @@ mysqli_close($conn);
         <div class="u-row">
             <div class="u-col">
                 <h4>Name:</h4>
-            </div>
-            <div class="u-col">
                 <?php foreach($acc as $info){ ?>
                     <p><?php echo htmlspecialchars($info['first_name']);?> <?php echo htmlspecialchars($info['last_name']);?></p>
                 <?php } ?>
@@ -92,8 +90,6 @@ mysqli_close($conn);
         <div class="u-row">
             <div class="u-col">
                 <h4>Email:</h4>
-            </div>
-            <div class="u-col">
                 <?php foreach($acc as $info){ ?>
                     <p><?php echo htmlspecialchars($info['email']);?></p>
                 <?php } ?>
@@ -102,8 +98,6 @@ mysqli_close($conn);
         <div class="u-row">
             <div class="u-col">
                 <h4>Date Created:</h4>
-            </div>
-            <div class="u-col">
                 <?php foreach($acc as $info){ ?>
                     <p><?php echo htmlspecialchars($info['date_created']);?></p>
                 <?php } ?>
