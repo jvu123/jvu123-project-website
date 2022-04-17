@@ -5,7 +5,7 @@ USE project_db;
 #Table for 'item'
 
 create table item(
-item_id smallint not null primary key,
+item_id smallint not null primary key AUTO_INCREMENT,
 item_name varchar(50) not null,
 description text default null,
 rarity varchar(25) not null,
@@ -15,7 +15,7 @@ price int not null
 #Table for 'category'
 
 create table category(
-category_id smallint not null primary key,
+category_id smallint not null primary key AUTO_INCREMENT,
 name varchar(50) not null
 );
 
@@ -32,21 +32,21 @@ FOREIGN KEY (category_id) REFERENCES category (category_id) ON DELETE CASCADE
 #Table for 'user_account'
 
 create table user_account(
-user_id smallint not null primary key,
+user_id smallint not null primary key AUTO_INCREMENT,
 username varchar(25) not null,
 password varchar(25) not null,
 first_name varchar(50) not null,
 last_name varchar(50) not null,
-date_created date not null,
+date_created datetime not null DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
 email varchar(50) default null
 );
 
 #Table for 'purchase'
 
 create table purchase(
-purchase_id smallint not null primary key,
+purchase_id smallint not null primary key AUTO_INCREMENT,
 item_id smallint not null,
-purchase_date datetime not null,
+purchase_date datetime not null DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
 FOREIGN KEY (item_id) REFERENCES item (item_id) ON DELETE CASCADE
 );
 
@@ -63,7 +63,7 @@ FOREIGN KEY (user_id) REFERENCES user_account (user_id) ON DELETE CASCADE
 #Table for 'shop'
 
 create table shop(
-shop_id smallint not null primary key,
+shop_id smallint not null primary key AUTO_INCREMENT,
 name varchar(50) not null
 );
 
