@@ -367,6 +367,34 @@ input{
     cursor: pointer;
 }
 
+/*signup page*/
+.signup-intro{
+    width:100%;
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.sign-input{
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    padding: 4px;
+}
+.btn-signup{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: rgb(122,105,21);
+    border-style: none;
+}
+.btn-signup:hover{ /* hover animation for user button */
+    background-color: rgb(126, 113, 72);
+    cursor: pointer;
+}
+
 /* user page */
 .user-header{
     height: 25vh;
