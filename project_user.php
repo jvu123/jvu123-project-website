@@ -58,7 +58,12 @@ mysqli_close($conn);
 <body>
     <section class="user-header">
         <div class="logout-section">
-            <a class="logout" href="logout.php">Logout</a>
+            <div class="logout-col">
+                <a class="logout" href="logout.php">Logout</a>
+            </div>
+            <div class="buy-col">
+                <a class="buy" href="project_buy.php">Buy</a>
+            </div>
         </div>
         <div class="user-intro">
             <h1>Welcome, <?php echo $user_data['username'];  ?></h1>
@@ -106,35 +111,37 @@ mysqli_close($conn);
 
     </section>
     
-    <div>
+    <div class="acct-header">
         <h3>Purchase History</h3>
     </div>
 
-    <section class="i-container">
-        <div class="i-row">
-            <div class="i-col">
-                    <h4>Date Purchased</h4>
-            </div>
-            <div class="i-col">
-                    <h4>Item</h4>
-            </div>
-            <div class="i-col">
-                    <h4>Price</h4>
-            </div>
-        </div>
-        <?php foreach($purs as $pur){ ?>
+    <section class="user-section">
+        <div class="user-container">
             <div class="i-row">
                 <div class="i-col">
-                        <p><?php echo htmlspecialchars($pur['purchase_date']);?></p>
+                        <h4>Date Purchased</h4>
                 </div>
                 <div class="i-col">
-                        <p><?php echo htmlspecialchars($pur['item_name']);?></p>
+                        <h4>Item</h4>
                 </div>
                 <div class="i-col">
-                        <p><?php echo htmlspecialchars($pur['price']);?></p>
+                        <h4>Price</h4>
                 </div>
             </div>
-        <?php } ?>
+            <?php foreach($purs as $pur){ ?>
+                <div class="i-row">
+                    <div class="i-col">
+                            <p><?php echo htmlspecialchars($pur['purchase_date']);?></p>
+                    </div>
+                    <div class="i-col">
+                            <p><?php echo htmlspecialchars($pur['item_name']);?></p>
+                    </div>
+                    <div class="i-col">
+                            <p><?php echo htmlspecialchars($pur['price']);?></p>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
     </section>
 
     <!-- Footer -->
