@@ -1,4 +1,4 @@
-UserID,Username,Password,FirstName,LastName,DateCreated,Email
+user_id,username,password,first_name,last_name,date_created,email
 1,thelegend27,password1,Liam,Smith,2021-03-13,l.smith@gmail.com
 2,noobmaster69,password2,Noah,Johnson,2021-03-18,n.johnson@gmail.com
 3,joe_mama,password3,Oliver,Williams,2021-03-23,o.williams@gmail.com

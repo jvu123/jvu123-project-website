@@ -1,4 +1,4 @@
-PurchaseID,ItemID,PurchaseDate
+purchase_id,item_id,purchase_date
 1,1,2021-03-19
 2,2,2021-03-19
 3,3,2021-03-19

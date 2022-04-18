@@ -1,4 +1,4 @@
-ItemID,ItemName,ItemDescription,ItemRarity,ItemPrice
+item_id,item_name,description,rarity,price
 1,Leather Chestplate,Made from cowhide,Common,20
 2,Leather Gauntlets,Made from cowhide,Common,5
 3,Leather Helmet,Made from cowhide,Common,10
