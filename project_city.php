@@ -1,5 +1,12 @@
 <?php
+session_start();
 
+include("login/connection.php");
+include("login/functions.php");
+
+$user_data = check_login($conn);
+
+$name=$user_data['username'];
 
 
 ?>
@@ -19,7 +26,14 @@
 </head>
 <body>
     <section class="city-header">
-        <?php include('templates/navbar.php'); ?>
+        <div class="logout-section">
+            <div class="logout-col">
+                <a class="logout" href="logout.php">Logout</a>
+            </div>
+            <div class="buy-col">
+                <a class="buy" href="project_user.php">Return to User</a>
+            </div>
+        </div>
 
         <div class="intro">
             <h1>City</h1>

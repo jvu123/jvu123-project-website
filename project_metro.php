@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+include("login/connection.php");
+include("login/functions.php");
+
+$user_data = check_login($conn);
+
+$name=$user_data['username'];
 
 ?>
 
@@ -17,7 +25,14 @@
 </head>
 <body>
     <section class="metro-header">
-        <?php include('templates/navbar.php'); ?>
+        <div class="logout-section">
+            <div class="logout-col">
+                <a class="logout" href="logout.php">Logout</a>
+            </div>
+            <div class="buy-col">
+                <a class="buy" href="project_user.php">Return to User</a>
+            </div>
+        </div>
 
         <div class="intro">
             <h1>Metropolis</h1>
@@ -72,8 +87,8 @@
             <div class="ex-location-col">
                 <img src="images/about.jpg">
                 <div class="layer">
-                    <h3>Return: Home</h3>
-                    <a href="project_index.php"></a>
+                    <h3>Return: Locations</h3>
+                    <a href="project_buy.php"></a>
                 </div>
             </div>
         </div>
