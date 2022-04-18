@@ -62,7 +62,6 @@ $name=$user_data['username'];
     </section>
 
     <section class="item-section">
-
         <div class="i-container">
             <div class="i-row">
                 <div class="i-col">
@@ -103,7 +102,6 @@ $name=$user_data['username'];
                 </div>
             <?php } ?>
         </div>
-
     </section>
 
     <!-- Footer -->

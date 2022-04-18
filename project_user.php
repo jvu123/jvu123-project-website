@@ -61,9 +61,12 @@ mysqli_close($conn);
             <div class="logout-col">
                 <a class="logout" href="logout.php">Logout</a>
             </div>
+
+            <!--
             <div class="buy-col">
                 <a class="buy" href="project_buy.php">Buy</a>
             </div>
+            -->
         </div>
         <div class="user-intro">
             <h1>Welcome, <?php echo $user_data['username'];  ?></h1>
