@@ -6,6 +6,7 @@
             <li><a href="project_index.php">HOME</a></li>
             <li><a href="project_about.php">ABOUT</a></li>
             <li><a href="project_items.php">ITEMS</a></li>
+            <li><a href="project_guild.php">GUILD RANKINGS</a></li>
             <a href="project_login.php" class="user">LOGIN</a>
         </ul>
     </div>

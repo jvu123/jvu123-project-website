@@ -9,9 +9,11 @@ session_start();
     $name=$user_data['username'];
 
  //write query
- $sql = "SELECT username, first_name, last_name, date_created, email
-from user_account
-where user_account.username='".$name."'";
+ $sql = "SELECT username, first_name, last_name, date_created, email, guild_name, job_name
+from user_account, guild, job
+where user_account.guild_id=guild.guild_id
+AND user_account.job_id=job.job_id
+AND user_account.username='".$name."'";
 
 //make query and get result
 $result = mysqli_query($conn, $sql);
@@ -107,6 +109,22 @@ mysqli_close($conn);
                 <h4>Date Created:</h4>
                 <?php foreach($acc as $info){ ?>
                     <p><?php echo htmlspecialchars($info['date_created']);?></p>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="u-row">
+            <div class="u-col">
+                <h4>Guild:</h4>
+                <?php foreach($acc as $info){ ?>
+                    <p><?php echo htmlspecialchars($info['guild_name']);?></p>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="u-row">
+            <div class="u-col">
+                <h4>Job:</h4>
+                <?php foreach($acc as $info){ ?>
+                    <p><?php echo htmlspecialchars($info['job_name']);?></p>
                 <?php } ?>
             </div>
         </div>
