@@ -4,9 +4,8 @@ include("login/connection.php");
 
  //write query for all item
  $sql = 'SELECT name, item_name, description, rarity, price  
-    FROM item, item_category, category
-    WHERE item.item_id=item_category.item_id 
-    AND category.category_id=item_category.category_id';
+    FROM item, category
+    WHERE item.category_id=category.category_id';
 
  //make query and get result
  $result = mysqli_query($conn, $sql);

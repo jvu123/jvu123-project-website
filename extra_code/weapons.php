@@ -10,11 +10,9 @@ $name=$user_data['username'];
 
  //write query for all item
  $sql = 'SELECT category.name, item_name, description, rarity, price  
-    FROM item, item_category, category, shop, shop_item
-    WHERE item.item_id=item_category.item_id 
-    AND category.category_id=item_category.category_id
-    AND shop.shop_id=shop_item.shop_id
-    AND item.item_id=shop_item.item_id
+    FROM item, category, shop
+    WHERE item.category_id=category.category_id
+    AND shop.shop_id=item.shop_id
     AND shop.shop_id=2';
 
  //make query and get result

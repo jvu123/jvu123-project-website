@@ -23,9 +23,8 @@ mysqli_free_result($result);
 
 //purchase query
 $sql2 = "SELECT purchase_date, item_name, price
-from user_account, user_purchase, purchase, item
-where user_account.user_id=user_purchase.user_id 
-and user_purchase.purchase_id=purchase.purchase_id
+from user_account, purchase, item
+where user_account.user_id=purchase.user_id 
 and item.item_id=purchase.item_id
 and user_account.username='".$name."'";
 
@@ -140,7 +139,7 @@ mysqli_close($conn);
                             <p><?php echo htmlspecialchars($pur['item_name']);?></p>
                     </div>
                     <div class="i-col">
-                            <p><?php echo htmlspecialchars($pur['price']);?></p>
+                            <p><?php echo htmlspecialchars($pur['price']);?> gold</p>
                     </div>
                 </div>
             <?php } ?>
