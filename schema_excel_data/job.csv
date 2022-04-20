@@ -1,0 +1,11 @@
+job_id,job_name,description
+1,Executive,Boss of the Guild
+2,Vice Executive,Second in command
+3,Secretary,Helps executive run guild
+4,Moderator,Manages the enforcers
+5,Captain,Manages the officers
+6,Enforcer,Enforces the rules
+7,Officer,Manages small groups of members
+8,HR (Human Recruitment) Officer,Manages recruitment
+9,Member,Regular of the guild
+10,Recruit,Just joined

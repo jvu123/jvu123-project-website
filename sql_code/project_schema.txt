@@ -2,16 +2,6 @@ DROP SCHEMA IF EXISTS project_db;
 CREATE SCHEMA project_db;
 USE project_db;
 
-#Table for 'item'
-
-create table item(
-item_id smallint not null primary key AUTO_INCREMENT,
-item_name varchar(50) not null,
-description text default null,
-rarity varchar(25) not null,
-price int not null
-);
-
 #Table for 'category'
 
 create table category(
@@ -19,14 +9,41 @@ category_id smallint not null primary key AUTO_INCREMENT,
 name varchar(50) not null
 );
 
-#Table for 'item_category'
+#Table for 'shop'
 
-create table item_category(
-item_id smallint not null,
+create table shop(
+shop_id smallint not null primary key AUTO_INCREMENT,
+name varchar(50) not null
+);
+
+#Table for 'item'
+
+create table item(
+item_id smallint not null primary key AUTO_INCREMENT,
+item_name varchar(50) not null,
+description text default null,
+rarity varchar(25) not null,
+price int not null,
 category_id smallint not null,
-primary key(item_id, category_id),
-FOREIGN KEY (item_id) REFERENCES item (item_id) ON DELETE CASCADE,
-FOREIGN KEY (category_id) REFERENCES category (category_id) ON DELETE CASCADE
+shop_id smallint not null,
+FOREIGN KEY (category_id) REFERENCES category (category_id) ON DELETE CASCADE,
+FOREIGN KEY (shop_id) REFERENCES shop (shop_id) ON DELETE CASCADE
+);
+
+#Table for 'job'
+
+create table job(
+job_id smallint not null primary key AUTO_INCREMENT,
+job_name varchar(50) not null,
+description text default null
+);
+
+#Table for 'guild'
+
+create table guild(
+guild_id smallint not null primary key AUTO_INCREMENT,
+guild_name varchar(50) not null,
+guild_rank int not null
 );
 
 #Table for 'user_account'
@@ -38,7 +55,11 @@ password varchar(25) not null,
 first_name varchar(50) not null,
 last_name varchar(50) not null,
 date_created datetime not null DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-email varchar(50) default null
+email varchar(50) default null,
+guild_id smallint,
+job_id smallint,
+FOREIGN KEY (guild_id) REFERENCES guild (guild_id) ON DELETE CASCADE,
+FOREIGN KEY (job_id) REFERENCES job (job_id) ON DELETE CASCADE
 );
 
 #Table for 'purchase'
@@ -46,33 +67,7 @@ email varchar(50) default null
 create table purchase(
 purchase_id smallint not null primary key AUTO_INCREMENT,
 item_id smallint not null,
+user_id smallint not null,
 purchase_date datetime not null DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
 FOREIGN KEY (item_id) REFERENCES item (item_id) ON DELETE CASCADE
-);
-
-#Table for 'user_purchase'
-
-create table user_purchase(
-purchase_id smallint not null,
-user_id smallint not null,
-primary key(purchase_id, user_id),
-FOREIGN KEY (purchase_id) REFERENCES purchase (purchase_id) ON DELETE CASCADE,
-FOREIGN KEY (user_id) REFERENCES user_account (user_id) ON DELETE CASCADE
-);
-
-#Table for 'shop'
-
-create table shop(
-shop_id smallint not null primary key AUTO_INCREMENT,
-name varchar(50) not null
-);
-
-#Table for 'shop_item'
-
-create table shop_item(
-item_id smallint not null,
-shop_id smallint not null,
-primary key(item_id, shop_id),
-FOREIGN KEY (item_id) REFERENCES item (item_id) ON DELETE CASCADE,
-FOREIGN KEY (shop_id) REFERENCES shop (shop_id) ON DELETE CASCADE
 );
