@@ -3,9 +3,10 @@
 include("login/connection.php");
 
  //write query for all item
- $sql = 'SELECT item_name, description, rarity, price  
-    FROM item, category
+ $sql = 'SELECT item_name, description, rarity, price, shop.name 
+    FROM item, category, shop
     WHERE item.category_id=category.category_id
+    AND item.shop_id=shop.shop_id
     AND item.category_id=6';
 
  //make query and get result
