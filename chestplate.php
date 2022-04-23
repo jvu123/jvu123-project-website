@@ -45,6 +45,7 @@ include("login/connection.php");
 
     </section>
 
+    <!-- Displaying Item information -->
     <?php include('templates/item_info.php'); ?>
 
     <!-- Footer -->
