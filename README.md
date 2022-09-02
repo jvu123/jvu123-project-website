@@ -11,23 +11,33 @@
   Unfortunately, I cannot figure out how to host the site properly at the time I typed this so the github pages will be a deadend if you click on it.
 
 *All files that should be immediately seen/ not in any special folder:
+
   project_login.php
+  
   project_signup.php
+  
   project_user.php
+  
   logout.php
+  
   project_category.php
+  
   project_guild.php
+  
   (anything like ring, sword, etc.).php //all these files follow the same template of showcasing items on a page.
 
 *Special Folders/files within the folders:
+
   templates/item_info.php
 
   sql_code/project_schema.txt
 
   login/connection.php
+  
   login/functions.php
   
 *Video resource (may help or may not)
+
   https://www.youtube.com/playlist?list=PL4cUxeGkcC9gksOX3Kd9KPo-O68ncT05o //php and mysql intro with some hands on with XAMPP
 
 
