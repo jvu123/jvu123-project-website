@@ -8,6 +8,7 @@
   XAMPP is mainly used for the database part because it uses MariaDB.
   I personally would recommend XAMPP because it is sort of straightforward,
   and because of how popular it is used, there are a decent amount of resources, forums, etc.
+  Unfortunately, I cannot figure out how to host the site properly at the time I typed this so the github pages will be a deadend if you click on it.
 
 *All files that should be immediately seen/ not in any special folder:
   project_login.php
